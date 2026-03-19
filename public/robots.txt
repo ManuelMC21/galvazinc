@@ -1,0 +1,11 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api
+
+# Host
+Host: https://galvazinc.vercel.app
+
+# Sitemaps
+Sitemap: https://galvazinc.vercel.app/sitemap.xml
