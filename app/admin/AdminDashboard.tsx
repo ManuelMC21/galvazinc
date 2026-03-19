@@ -100,54 +100,54 @@ export default function AdminDashboard({
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-6 sm:py-10">
         {/* Tabs */}
-        <div className="flex gap-2 mb-8">
+        <div className="grid grid-cols-2 gap-2 mb-8 sm:flex sm:flex-wrap">
           <button
             onClick={() => setActiveTab("list")}
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium transition-all ${
+            className={`flex items-center justify-center sm:justify-start gap-2 px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${
               activeTab === "list"
                 ? "bg-brand-500 text-white shadow-lg shadow-brand-500/20"
                 : "bg-steel-800 text-steel-400 hover:text-white border border-steel-700"
             }`}
           >
-            <FolderOpen className="w-4 h-4" />
-            Proyectos ({projects.length})
+            <FolderOpen className="w-4 h-4 shrink-0" />
+            <span className="truncate">Proyectos ({projects.length})</span>
           </button>
           <button
             onClick={() => setActiveTab("new")}
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium transition-all ${
+            className={`flex items-center justify-center sm:justify-start gap-2 px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${
               activeTab === "new"
                 ? "bg-brand-500 text-white shadow-lg shadow-brand-500/20"
                 : "bg-steel-800 text-steel-400 hover:text-white border border-steel-700"
             }`}
           >
-            <PlusCircle className="w-4 h-4" />
-            Nuevo proyecto
+            <PlusCircle className="w-4 h-4 shrink-0" />
+            <span className="truncate">Nuevo proyecto</span>
           </button>
           <button
             onClick={() => setActiveTab("contact")}
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium transition-all ${
+            className={`flex items-center justify-center sm:justify-start gap-2 px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${
               activeTab === "contact"
                 ? "bg-brand-500 text-white shadow-lg shadow-brand-500/20"
                 : "bg-steel-800 text-steel-400 hover:text-white border border-steel-700"
             }`}
           >
-            <Phone className="w-4 h-4" />
-            Info de contacto
+            <Phone className="w-4 h-4 shrink-0" />
+            <span className="truncate">Info de contacto</span>
           </button>
           <button
             onClick={() => setActiveTab("messages")}
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium transition-all ${
+            className={`flex items-center justify-center sm:justify-start gap-2 px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${
               activeTab === "messages"
                 ? "bg-brand-500 text-white shadow-lg shadow-brand-500/20"
                 : "bg-steel-800 text-steel-400 hover:text-white border border-steel-700"
             }`}
           >
-            <Mail className="w-4 h-4" />
-            Mensajes
+            <Mail className="w-4 h-4 shrink-0" />
+            <span className="truncate">Mensajes</span>
             {unreadCount > 0 && (
-              <span className="bg-brand-500 text-white text-xs font-bold px-1.5 py-0.5 rounded-full leading-none">
+              <span className="bg-brand-500 text-white text-xs font-bold px-1.5 py-0.5 rounded-full leading-none shrink-0">
                 {unreadCount}
               </span>
             )}
@@ -225,7 +225,7 @@ export default function AdminDashboard({
         {/* New Project Form */}
         {activeTab === "new" && (
           <div className="max-w-2xl">
-            <div className="bg-steel-800 border border-steel-700 rounded-2xl p-8">
+            <div className="bg-steel-800 border border-steel-700 rounded-2xl p-4 sm:p-8">
               <h2 className="text-white font-bold text-xl mb-6">
                 Nuevo proyecto
               </h2>
@@ -242,7 +242,7 @@ export default function AdminDashboard({
         {/* Contact Info */}
         {activeTab === "contact" && (
           <div>
-            <div className="bg-steel-800 border border-steel-700 rounded-2xl p-8">
+            <div className="bg-steel-800 border border-steel-700 rounded-2xl p-4 sm:p-8">
               <div className="flex items-center justify-between mb-2">
                 <h2 className="text-white font-bold text-xl">Información de contacto</h2>
               </div>
@@ -257,7 +257,7 @@ export default function AdminDashboard({
         {/* Messages */}
         {activeTab === "messages" && (
           <div>
-            <div className="bg-steel-800 border border-steel-700 rounded-2xl p-8">
+            <div className="bg-steel-800 border border-steel-700 rounded-2xl p-4 sm:p-8">
               <h2 className="text-white font-bold text-xl mb-2">Mensajes recibidos</h2>
               <p className="text-steel-400 text-sm mb-8">
                 Mensajes enviados desde el formulario de contacto del sitio.

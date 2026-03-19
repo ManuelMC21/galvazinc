@@ -99,7 +99,7 @@ export default function ContactEditor({ initialData }: ContactEditorProps) {
     <div className="space-y-8">
 
       {/* Logo */}
-      <div className="bg-steel-700/40 border border-steel-600/50 rounded-xl p-6">
+      <div className="bg-steel-700/40 border border-steel-600/50 rounded-xl p-4 sm:p-6">
         <div className="mb-5">
           <h3 className="text-white font-semibold">Logo de la empresa</h3>
           <p className="text-steel-500 text-xs mt-0.5">
@@ -165,7 +165,7 @@ export default function ContactEditor({ initialData }: ContactEditorProps) {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
         {/* Emails */}
-        <div className="bg-steel-700/40 border border-steel-600/50 rounded-xl p-6">
+        <div className="bg-steel-700/40 border border-steel-600/50 rounded-xl p-4 sm:p-6">
           <div className="flex items-center justify-between mb-4">
             <div>
               <h3 className="text-white font-semibold">Correos electrónicos</h3>
@@ -201,7 +201,7 @@ export default function ContactEditor({ initialData }: ContactEditorProps) {
         </div>
 
         {/* Phones */}
-        <div className="bg-steel-700/40 border border-steel-600/50 rounded-xl p-6">
+        <div className="bg-steel-700/40 border border-steel-600/50 rounded-xl p-4 sm:p-6">
           <div className="flex items-center justify-between mb-4">
             <div>
               <h3 className="text-white font-semibold">Teléfonos</h3>
@@ -241,7 +241,7 @@ export default function ContactEditor({ initialData }: ContactEditorProps) {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
         {/* Address */}
-        <div className="bg-steel-700/40 border border-steel-600/50 rounded-xl p-6">
+        <div className="bg-steel-700/40 border border-steel-600/50 rounded-xl p-4 sm:p-6">
           <div className="mb-4">
             <h3 className="text-white font-semibold">Dirección</h3>
             <p className="text-steel-500 text-xs mt-0.5">Ubicación física del negocio</p>
@@ -256,7 +256,7 @@ export default function ContactEditor({ initialData }: ContactEditorProps) {
         </div>
 
         {/* Schedule */}
-        <div className="bg-steel-700/40 border border-steel-600/50 rounded-xl p-6">
+        <div className="bg-steel-700/40 border border-steel-600/50 rounded-xl p-4 sm:p-6">
           <div className="flex items-center justify-between mb-4">
             <div>
               <h3 className="text-white font-semibold">Horarios de atención</h3>
@@ -293,7 +293,7 @@ export default function ContactEditor({ initialData }: ContactEditorProps) {
       </div>
 
       {/* Social links */}
-      <div className="bg-steel-700/40 border border-steel-600/50 rounded-xl p-6">
+      <div className="bg-steel-700/40 border border-steel-600/50 rounded-xl p-4 sm:p-6">
         <div className="mb-5">
           <h3 className="text-white font-semibold">Redes sociales</h3>
           <p className="text-steel-500 text-xs mt-0.5">
@@ -328,7 +328,7 @@ export default function ContactEditor({ initialData }: ContactEditorProps) {
       </div>
 
       {/* Hero / Portada */}
-      <div className="bg-steel-700/40 border border-steel-600/50 rounded-xl p-6">
+      <div className="bg-steel-700/40 border border-steel-600/50 rounded-xl p-4 sm:p-6">
         <div className="mb-5">
           <h3 className="text-white font-semibold">Portada del sitio</h3>
           <p className="text-steel-500 text-xs mt-0.5">
