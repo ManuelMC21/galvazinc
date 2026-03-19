@@ -27,11 +27,11 @@ export default function MobileMenu() {
       {/* Full-screen overlay */}
       {open && (
         <div
-          className="md:hidden fixed inset-0 top-16 bg-steel-900/98 backdrop-blur-md z-40 border-t border-steel-700/50"
+          className="md:hidden fixed inset-0 top-16 bg-steel-900 z-40 border-t border-steel-700/50"
           onClick={() => setOpen(false)}
         >
           <nav
-            className="px-6 py-8 space-y-2"
+            className="bg-steel-900 px-6 py-8 space-y-2 h-full"
             onClick={(e) => e.stopPropagation()}
           >
             {links.map((link) => (

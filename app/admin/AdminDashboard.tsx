@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   PlusCircle,
   Trash2,
@@ -39,12 +40,14 @@ export default function AdminDashboard({
   const [deletingId, setDeletingId] = useState<number | null>(null);
   const [deleteError, setDeleteError] = useState("");
   const unreadCount = initialMessages.filter((m) => !m.read).length;
+  const router = useRouter();
 
   const refreshProjects = async () => {
     try {
-      const res = await fetch("/api/projects");
+      const res = await fetch("/api/projects", { cache: "no-store" });
       const data = await res.json();
       setProjects(data);
+      router.refresh();
     } catch {
       // silent
     }
@@ -60,7 +63,7 @@ export default function AdminDashboard({
         const err = await res.json();
         throw new Error(err.error);
       }
-      setProjects((prev) => prev.filter((p) => p.id !== id));
+      await refreshProjects();
     } catch (err: unknown) {
       setDeleteError(err instanceof Error ? err.message : "Error al eliminar");
     } finally {
